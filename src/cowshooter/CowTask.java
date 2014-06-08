@@ -6,6 +6,9 @@
  * We make no guarantees that this code is fit for any purpose. 
  * Visit http://www.pragmaticprogrammer.com/titles/ahmine for more book information.
 ***/
+
+//Zombie cow is coming. Run Braaaaaaaaaaaaaaaa
+
 package cowshooter;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
