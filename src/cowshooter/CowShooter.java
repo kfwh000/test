@@ -15,7 +15,8 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Cow;
+//import org.bukkit.entity.Cow;
+import org.bukkit.entity.Creeper;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -49,10 +50,15 @@ public class CowShooter extends JavaPlugin implements Listener {
         vec.setY(vec.getY() * mult);
         vec.setZ(vec.getZ() * mult);
  
-        final Cow cow = player.getWorld().spawn(loc, Cow.class);//(3)
-        cow.setVelocity(vec);
-        cow.setFireTicks(20);
-        BukkitRunnable runnable = new CowTask(player.getWorld(), cow);
+        //final Cow cow = player.getWorld().spawn(loc, Cow.class);//(3)
+
+        final Creeper creeper = player.getWorld().spawn(loc, Creeper.class);//(3)
+        //cow.setVelocity(vec);
+        //cow.setFireTicks(20);
+        creeper.setVelocity(vec);
+        creeper.setFireTicks(20);
+        //BukkitRunnable runnable = new CowTask(player.getWorld(), cow);
+        BukkitRunnable runnable = new CowTask(player.getWorld(), creeper);
         runnable.runTaskTimer(this, 0L, 0L);
       }
     }
